@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deusangela & Samuel 💜</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f0ff;
+      color: #4a154b;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #d8b4f8;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    #contador {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    .frase {
+      margin: 30px;
+      font-style: italic;
+      font-size: 1.3em;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .imagem {
+      background-color: #fff0ff;
+      border: 2px solid #d8b4f8;
+      border-radius: 15px;
+      padding: 10px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .imagem img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .imagem p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    iframe {
+      display: none; /* Esconde o vídeo visualmente, mas toca o som */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Deusangela & Samuel 💜</h1>
+    <div id="contador"></div>
+  </header>
+
+  <div class="frase">
+    “Cada segundo com você é um presente que quero viver para sempre.”
+  </div>
+
+  <div class="galeria">
+    <div class="imagem">
+      <img src="imagens/foto1.jpeg" alt="O início" />
+      <p>O início</p>
+    </div>
+    <div class="imagem">
+      <img src="imagens/foto2.jpeg.jpeg" alt="Amo viajar com você" />
+      <p>Amo viajar com você</p>
+    </div>
+    <div class="imagem">
+      <img src="imagens/foto3.jpeg.jpeg" alt="Meu sorriso é mais bonito com você" />
+      <p>Meu sorriso é mais bonito com você</p>
+    </div>
+  </div>
+
+  <footer>
+    Criado com ❤️ por Deusangela para Samuel
+  </footer>
+
+  <!-- Música de fundo (Beautiful Things - Benson Boone) -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/YQ-qToZU5WY?autoplay=1&loop=1&playlist=YQ-qToZU5WY" frameborder="0" allow="autoplay"></iframe>
+
+  <!-- Script do contador de tempo de namoro -->
+  <script>
+    const dataInicio = new Date('2024-04-02T00:00:00');
+    const contador = document.getElementById('contador');
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - dataInicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      contador.innerText = `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos juntos 💕`;
+    }
+
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+  </script>
+</body>
+</html>
